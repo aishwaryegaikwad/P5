@@ -40,7 +40,7 @@ function draw() {
   for (let i = n; i >= 0; i--) {
 		let alpha = 1 - noiseProg(i / n);
 		if (i % 2 === 0) {
-            fill(mouseX/2000,360,100);
+            fill(mouseX/1800,360,100);
             // fill(12,mouseX/1000,100);
 		} else {
 			fill(0);
