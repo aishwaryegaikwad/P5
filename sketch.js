@@ -1,4 +1,4 @@
-// By Roni Kaufman
+// Engineered By Aishwarye Gaikwad and Roni Kaufman (https://ronikaufman.github.io)
 
 let kMax;
 let step;
