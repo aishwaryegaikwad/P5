@@ -5,7 +5,8 @@ let step;
 let n = 60; // number of blobs
 let radius = 0; // diameter of the circle
 let inter = 0.5; // difference between the sizes of two blobs
-let maxNoise = 500;
+let maxNoise = 1000;
+
 
 let noiseProg = (x) => (x);
 
@@ -13,11 +14,21 @@ var canvas;
 
 function windowResized(){
     resizeCanvas(windowWidth, windowHeight);
+    if(windowWidth <= 720) {
+        maxNoise = 600;
+    } else if(windowWidth <= 1080){
+        maxNoise = 700;
+    } else if(windowWidth <= 1440){
+        maxNoise = 800;
+    } else if(windowWidth <= 2160){
+        maxNoise = 900;
+    } 
 }
 
 function setup() {
   canvas= createCanvas(windowWidth, windowHeight);
   canvas.style('z-index','-100');
+//   canvas.style('width','100%')
   canvas.position(0,0);
 
 
@@ -33,14 +44,23 @@ function setup() {
 function draw() {
 
   background(0);
-  fill(mouseX/5,360-(mouseY/2),360);
 	let t = frameCount/100;
 	kMax = noise(t/2);
   
+    if(windowWidth <= 720) {
+        maxNoise = 300;
+    } else if(windowWidth <= 1080){
+        maxNoise = 700;
+    } else if(windowWidth <= 1440){
+        maxNoise = 800;
+    } else if(windowWidth <= 2160){
+        maxNoise = 900;
+    } 
+
   for (let i = n; i >= 0; i--) {
 		let alpha = 1 - noiseProg(i / n);
 		if (i % 2 === 0) {
-            fill(mouseX/2000,360,100);
+            fill(mouseX/1800,100,100);
             // fill(12,mouseX/1000,100);
 		} else {
 			fill(0);
