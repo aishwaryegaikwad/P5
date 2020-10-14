@@ -48,9 +48,9 @@ function draw() {
 	kMax = noise(t/2);
   
     if(windowWidth <= 720) {
-        maxNoise = 300;
+        maxNoise = 400;
     } else if(windowWidth <= 1080){
-        maxNoise = 700;
+        maxNoise = 600;
     } else if(windowWidth <= 1440){
         maxNoise = 800;
     } else if(windowWidth <= 2160){
