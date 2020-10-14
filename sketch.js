@@ -14,14 +14,20 @@ var canvas;
 
 function windowResized(){
     resizeCanvas(windowWidth, windowHeight);
-    if(windowWidth <= 720) {
-        maxNoise = 600;
+    if(windowWidth <= 320) {
+        maxNoise = 240;
+    } else if(windowWidth <= 480) {
+        maxNoise = 320;
+    } else if(windowWidth <= 640) {
+        maxNoise = 500;
+    }else if(windowWidth <= 720) {
+        maxNoise = 640;
     } else if(windowWidth <= 1080){
         maxNoise = 700;
     } else if(windowWidth <= 1440){
         maxNoise = 800;
     } else if(windowWidth <= 2160){
-        maxNoise = 900;
+        maxNoise = 1000;
     } 
 }
 
@@ -47,14 +53,20 @@ function draw() {
 	let t = frameCount/100;
 	kMax = noise(t/2);
   
-    if(windowWidth <= 720) {
-        maxNoise = 400;
+    if(windowWidth <= 320) {
+        maxNoise = 240;
+    } else if(windowWidth <= 480) {
+        maxNoise = 320;
+    } else if(windowWidth <= 640) {
+        maxNoise = 500;
+    }else if(windowWidth <= 720) {
+        maxNoise = 640;
     } else if(windowWidth <= 1080){
-        maxNoise = 600;
+        maxNoise = 700;
     } else if(windowWidth <= 1440){
         maxNoise = 800;
     } else if(windowWidth <= 2160){
-        maxNoise = 900;
+        maxNoise = 1000;
     } 
 
   for (let i = n; i >= 0; i--) {
