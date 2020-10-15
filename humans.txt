@@ -1,0 +1,16 @@
+/* SITE BY */
+
+Role: Design, Engineering
+Name: Aishwarye Gaikwad
+
+/* SPECIAL THANKS */
+
+Role: Design
+Name: Roni Kaufman
+Site: https://ronikaufman.github.io
+
+/* SITE */
+
+Standards: HTML5, CSS3
+Components: SASS, p5JS
+Software: Microsoft VSCode, Prettier, Processing
